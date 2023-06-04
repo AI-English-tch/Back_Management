@@ -1,0 +1,19 @@
+version: '3'
+services:
+  wordtalk-ui:
+    build:
+      context: .
+    restart: always
+    container_name: wordtalk-ui
+    image: wordtalk-ui
+    networks:
+      - wordtalk_default
+    external_links:
+      - wordtalk-gateway
+    ports:
+      - 80:80
+
+# 加入到后端网络， 默认为 wordtalk_default  | docker network ls   查看
+networks:
+  wordtalk_default:
+    external: true
