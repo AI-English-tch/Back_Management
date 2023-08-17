@@ -11,7 +11,7 @@ services:
     external_links:
       - wordtalk-gateway
     ports:
-      - 80:80
+      - 90:80
 
 # 加入到后端网络， 默认为 wordtalk_default  | docker network ls   查看
 networks:
